@@ -1,0 +1,12 @@
+{
+  "name": "cryptobilly",
+  "displayName": "cryptobilly",
+  "expo": {
+    "name": "cryptobilly",
+    "slug": "cryptobilly",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
