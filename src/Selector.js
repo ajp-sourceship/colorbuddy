@@ -1,28 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Header } from 'react-native-elements';
+import { iOSUIKit } from 'react-native-typography';
 
-export default Selector = (props) => {
+export default TitleBlock = (props) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity
-                style={styles.bStyle} >
-                <Text>
-                    BTC
-                </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={{...styles.bStyle, borderColor:'blue'}} >
-                <Text>
-                    ETH
-                </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={{...styles.bStyle, borderColor:'green'}} >
-                <Text>
-                    DOGE
-                </Text>
-            </TouchableOpacity>
+            <Text style={{...iOSUIKit.largeTitleEmphasized, margin:2}}>
+                Color: 
+            </Text>
+            <Text style={{...iOSUIKit.bodyEmphasized, margin:4}}>
+                {props.selectedColor}
+            </Text>
+
+
         </View>
     );
 }
@@ -30,10 +21,9 @@ export default Selector = (props) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         backgroundColor: '#fff',
+        alignItems:'flex-end',
+        padding:10
     },
-    bStyle:{
-        margin: 10, borderWidth: 2, borderColor: 'red', borderRadius: 4, paddingVertical: 6, paddingHorizontal: 6
-    }
 });
