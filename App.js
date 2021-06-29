@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from 'react-native-elements';
 import Chart from './src/Chart'
-import TitleBlock from './src/Selector';
+import TitleBlock from './src/TitleBlock';
+import SearchBlock from './src/SearchBlock'
+
 export default function App() {
 
   const [colors, setColors] = useState([])
@@ -34,6 +36,10 @@ export default function App() {
   const selectColor=(color)=> {
     setSelectedColor(color.ColorName)
   }
+  const setFString =(fString)=> {
+    setFilterString(fString)
+    setColorsFiltered(colors.filter(color => color.ColorName.toLowerCase().includes(fString.toLowerCase())))
+  }
 
   return (
     <View style={styles.container}>
@@ -46,8 +52,13 @@ export default function App() {
       } />
       <TitleBlock
         selectedColor={selectedColor} />
+      <SearchBlock
+        setFilterString={(text) => setFString(text)}
+        fString={filterString}
+        />
+        
       <Chart  
-        colors={colors}
+        colors={colorsFiltered}
         selectColor={(color) => selectColor(color)}/>
       
     </View>
