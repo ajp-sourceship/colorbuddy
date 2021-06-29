@@ -9,7 +9,7 @@ export default TitleBlock = (props) => {
             <Text style={{...iOSUIKit.largeTitleEmphasized, margin:2}}>
                 Color: 
             </Text>
-            <Text style={{...iOSUIKit.largeTitleEmphasized, margin:4}}>
+            <Text style={{...iOSUIKit.largeTitleEmphasized, margin:2}}>
                 {props.selectedColor}
             </Text>
 

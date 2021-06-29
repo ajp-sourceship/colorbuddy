@@ -50,6 +50,7 @@ export default function App() {
           Color Buddy
         </Text>
       } />
+      
       <TitleBlock
         selectedColor={selectedColor} />
       <SearchBlock
