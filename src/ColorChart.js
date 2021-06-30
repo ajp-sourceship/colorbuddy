@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { Header } from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default Chart = (props) => {
+export default ColorChart = (props) => {
   return (
     <ScrollView style={styles.container}>
       {props.colors.map(color => {

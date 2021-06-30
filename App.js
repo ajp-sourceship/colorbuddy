@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from 'react-native-elements';
-import Chart from './src/Chart'
+import ColorChart from './src/ColorChart'
 import TitleBlock from './src/TitleBlock';
 import SearchBlock from './src/SearchBlock'
 
@@ -58,7 +58,7 @@ export default function App() {
         fString={filterString}
         />
         
-      <Chart  
+      <ColorChart  
         colors={colorsFiltered}
         selectColor={(color) => selectColor(color)}/>
       
