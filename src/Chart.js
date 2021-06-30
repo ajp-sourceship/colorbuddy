@@ -7,7 +7,7 @@ export default Chart = (props) => {
   return (
     <ScrollView style={styles.container}>
       {props.colors.map(color => {
-        return <TouchableOpacity
+        return <TouchableOpacity id={color.HexString}
           onPress={() => props.selectColor(color) }
            style={{ backgroundColor: 'white', height: 80, margin:10, borderRadius:6, padding:2 }}>
           < View style={{ height: '80%', backgroundColor: color.HexString, borderColor: 'white', borderRadius:6,  }}>
