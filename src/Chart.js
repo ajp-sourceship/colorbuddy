@@ -4,7 +4,7 @@ import { Header } from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default Chart = (props) => {
-  return ( // flatlist is better practice
+  return ( // flatlist is better practice 
     <ScrollView style={styles.container}>
       {props.colors.map((color, index) => {
         return <TouchableOpacity id={index}
